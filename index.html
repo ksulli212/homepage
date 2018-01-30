@@ -1,34 +1,72 @@
-
 <!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
 <title>Katherine Sullivan</title>
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+  $(function(){
+    $("#header1").hide();
+    $("#header1").addClass("important");
+    $("#header1").fadeIn(5000);
+    $("#button").click(function(){
+
+      var name = $("#input_feild").val();
+      $("#paragraph").text("Welcome to this site, " + name + "!");
+      $("#paragraph").slideUp(50);
+
+      $("#paragraph").slideDown(500);
+      $("#paragraph").css("background-color", "red");
+    });
+
+    $("#paragraph2").mouseover(function(){
+      $(this).css("color", "blue");
+
+    });
+    $("#paragraph2").mouseout(function(){
+      $(this).css("color", "black");
+    });
+  });
+</script>
 <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
   <div class="scrollmenu">
   <a href="mailto:ksulli@pointpark.edu?subject = Introduction&body = message">Contact</a>
-  <a href="#about">About</a>
+  <a href="homeworkKatP2.html">Programs</a>
   ...
 </div>
 
-<h1>My name is Katherine Sullivan and I am a junior at Point Park Univeristy.  I am also a member of a club called ITSO.</h1>
-<p>
-I am a dancer, a swimmmer and i do other things when not doing school.
+<h1 id="header1">My name is Katherine Sullivan and I am a junior at Point Park Univeristy.  I am also a member of a club called ITSO.</h1>
+<p id="paragraph2">
+I am a dancer, a swimmmer and i do other things when not doing school.  I have done volenteer work at the Carnegie Museum and at the Saint James Church.
+I have also volenteered at my local dance school for when the teacher needed help.
 </p>
 <h3>This is Me.</h3>
+<p id="paragraph">
+  Hello World!
+</p>
 <img src="prom2015-13.jpg" height="250" width="200">
 <div>
   <table style="width:50%">
     <tr>
-      <th>Katherine</th>
-      <th>Sullivan</th>
-      <th>21</th>
+      <th>X</th>
+      <th>Y</th>
+      <th>Z</th>
     </tr>
-
+    <tr>
+      <th>X2</th>
+      <th>Y2</th>
+      <th>Z2</th>
+    </tr>
+    <tr>
+      <th>X3</th>
+      <th>Y3</th>
+      <th>Z3</th>
+    </tr>
   </table>
 </div>
-
+Name: <input id="input_feild"></input>
+<button id="button">Click Me</button>
 </body>
 </html>
